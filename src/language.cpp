@@ -1,5 +1,5 @@
 ﻿/*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -42,9 +42,9 @@ static const QMap<QString, QString> s_displayName = {{"zh_CN", "简体中文"},
 
 Language::Language(QObject *parent)
     : QObject(parent)
-    , m_interface("com.cutefish.Settings",
+    , m_interface("com.yoyo.Settings",
                   "/Language",
-                  "com.cutefish.Language",
+                  "com.yoyo.Language",
                   QDBusConnection::sessionBus())
     , m_currentLanguage(-1)
 {

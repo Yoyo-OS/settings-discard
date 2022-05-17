@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
     Application app(argc, argv);
 
-    app.setWindowIcon(QIcon::fromTheme("cutefish-settings"));
+    app.setWindowIcon(QIcon::fromTheme("yoyo-settings"));
 
     return 0;
 }

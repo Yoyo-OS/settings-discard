@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(PROJECT_NAME cutefish-settings)
+set(PROJECT_NAME yoyo-settings)
 project(${PROJECT_NAME})
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -70,7 +70,7 @@ set(RESOURCES
 )
 
 qt5_add_dbus_adaptor(DBUS_SOURCES
-                     src/com.cutefish.SettingsUI.xml
+                     src/com.yoyo.SettingsUI.xml
                      src/application.h Application)
 set_source_files_properties(${DBUS_SOURCES} PROPERTIES SKIP_AUTOGEN ON)
 
@@ -113,7 +113,7 @@ add_dependencies(${PROJECT_NAME} translations)
 install(TARGETS ${PROJECT_NAME} RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 
 install(FILES
-    cutefish-settings.desktop
+    yoyo-settings.desktop
     DESTINATION /usr/share/applications/
     COMPONENT Runtime
 )

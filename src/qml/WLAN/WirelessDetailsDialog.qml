@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -22,7 +22,7 @@ import QtQuick.Window 2.3
 import QtQuick.Controls 2.4
 import QtQuick.Layouts 1.3
 import FishUI 1.0 as FishUI
-import Cutefish.NetworkManagement 1.0 as NM
+import Yoyo.NetworkManagement 1.0 as NM
 
 Dialog {
     id: control

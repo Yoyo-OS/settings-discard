@@ -1,7 +1,7 @@
-Source: cutefish-settings
+Source: yoyo-settings
 Section: devel
 Priority: optional
-Maintainer: CutefishOS <support@cutefishos.com>
+Maintainer: YoyoOS <support@yoyoos.com>
 Build-Depends: cmake,
                debhelper (>= 9),
                extra-cmake-modules,
@@ -23,9 +23,9 @@ Build-Depends: cmake,
                qttools5-dev-tools,
                libqapt-dev
 Standards-Version: 4.5.0
-Homepage: https://cutefishos.com
+Homepage: https://yoyoos.com
 
-Package: cutefish-settings
+Package: yoyo-settings
 Architecture: any
 Depends: qml-module-qtquick-controls2,
          qml-module-qtquick2,
@@ -40,4 +40,4 @@ Depends: qml-module-qtquick-controls2,
          kscreen,
          ${misc:Depends},
          ${shlibs:Depends}
-Description: CutefishOS Settings
+Description: YoyoOS Settings

@@ -1,6 +1,6 @@
 # Settings
 
-The System Settings application for Cutefish Desktop.
+The System Settings application for Yoyo Desktop.
 
 ![screenshot](screenshots/Screenshot_20211025_150819.png)
 

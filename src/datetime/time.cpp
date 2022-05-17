@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -25,7 +25,7 @@
 
 Time::Time(QObject *parent)
     : QObject(parent)
-    , m_settings("cutefishos", "locale")
+    , m_settings("yoyoos", "locale")
 {
     m_twentyFour = m_settings.value("twentyFour", false).toBool();
 
@@ -104,7 +104,7 @@ void Time::setTwentyFour(bool t)
         m_twentyFour = t;
         m_settings.setValue("twentyFour", m_twentyFour);
 
-        QDBusInterface("com.cutefish.Statusbar", "/Statusbar").call("setTwentyFourTime", m_twentyFour);
+        QDBusInterface("com.yoyo.Statusbar", "/Statusbar").call("setTwentyFourTime", m_twentyFour);
 
         emit twentyFourChanged();
     }

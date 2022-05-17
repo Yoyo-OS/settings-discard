@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
- * Author:     Kate Leet <support@cutefishos.com>
+ * Author:     Kate Leet <support@yoyoos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,7 @@ import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 
 import FishUI 1.0 as FishUI
-import Cutefish.Settings 1.0
+import Yoyo.Settings 1.0
 import "../"
 
 ItemPage {

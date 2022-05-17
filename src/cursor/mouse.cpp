@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -22,9 +22,9 @@
 
 Mouse::Mouse(QObject *parent)
     : QObject(parent)
-    , m_interface("com.cutefish.Settings",
+    , m_interface("com.yoyo.Settings",
                   "/Mouse",
-                  "com.cutefish.Mouse",
+                  "com.yoyo.Mouse",
                   QDBusConnection::sessionBus())
 {
     if (m_interface.isValid()) {

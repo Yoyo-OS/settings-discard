@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -19,7 +19,7 @@
 
 import QtQuick 2.12
 import FishUI 1.0 as FishUI
-import Cutefish.Screen 1.0 as CS
+import Yoyo.Screen 1.0 as CS
 import "../"
 
 IconCheckBox {

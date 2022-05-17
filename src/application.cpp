@@ -41,10 +41,10 @@ Application::Application(int &argc, char **argv)
     : QApplication(argc, argv)
 {
     setWindowIcon(QIcon::fromTheme("preferences-system"));
-    setOrganizationName("cutefishos");
+    setOrganizationName("yoyoos");
 
     QCommandLineParser parser;
-    parser.setApplicationDescription(QStringLiteral("Cutefish Settings"));
+    parser.setApplicationDescription(QStringLiteral("Yoyo Settings"));
     parser.addHelpOption();
 
     QCommandLineOption moduleOption("m", "Switch to module", "module");
@@ -53,8 +53,8 @@ Application::Application(int &argc, char **argv)
 
     const QString module = parser.value(moduleOption);
 
-    if (!QDBusConnection::sessionBus().registerService("com.cutefish.SettingsUI")) {
-        QDBusInterface iface("com.cutefish.SettingsUI", "/SettingsUI", "com.cutefish.SettingsUI", QDBusConnection::sessionBus());
+    if (!QDBusConnection::sessionBus().registerService("com.yoyo.SettingsUI")) {
+        QDBusInterface iface("com.yoyo.SettingsUI", "/SettingsUI", "com.yoyo.SettingsUI", QDBusConnection::sessionBus());
         if (iface.isValid())
             iface.call("switchToPage", module);
         return;
@@ -64,7 +64,7 @@ Application::Application(int &argc, char **argv)
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/SettingsUI"), this);
 
     // QML
-    const char *uri = "Cutefish.Settings";
+    const char *uri = "Yoyo.Settings";
     qmlRegisterType<Appearance>(uri, 1, 0, "Appearance");
     qmlRegisterType<FontsModel>(uri, 1, 0, "FontsModel");
     qmlRegisterType<Brightness>(uri, 1, 0, "Brightness");
@@ -94,7 +94,7 @@ Application::Application(int &argc, char **argv)
 
     // Translations
     QLocale locale;
-    QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/cutefish-settings/translations/").arg(locale.name());
+    QString qmFilePath = QString("%1/%2.qm").arg("/usr/share/yoyo-settings/translations/").arg(locale.name());
     if (QFile::exists(qmFilePath)) {
         QTranslator *translator = new QTranslator(QApplication::instance());
         if (translator->load(qmFilePath)) {

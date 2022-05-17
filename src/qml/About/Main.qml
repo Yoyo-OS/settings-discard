@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -21,7 +21,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
 import FishUI 1.0 as FishUI
-import Cutefish.Settings 1.0
+import Yoyo.Settings 1.0
 import "../"
 
 ItemPage {
@@ -57,8 +57,8 @@ ItemPage {
 
             Label {
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                text: "<b>Cutefish</b>"
-                visible: !about.isCutefishOS
+                text: "<b>Yoyo</b>"
+                visible: !about.isYoyoOS
                 font.pointSize: 22
                 color: "#3385FF"
                 leftPadding: FishUI.Units.largeSpacing * 2
@@ -71,13 +71,13 @@ ItemPage {
                 sourceSize: Qt.size(500, 76)
                 source: "qrc:/images/logo.png"
                 Layout.alignment: Qt.AlignHCenter
-                visible: about.isCutefishOS
+                visible: about.isYoyoOS
                 asynchronous: true
             }
 
             Label {
                 text: qsTr("Built on %1").arg(about.prettyProductName)
-                visible: !about.isCutefishOS
+                visible: !about.isYoyoOS
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
                 color: FishUI.Theme.disabledTextColor
             }
@@ -124,7 +124,7 @@ ItemPage {
 
             StandardButton {
                 Layout.fillWidth: true
-                visible: about.isCutefishOS
+                visible: about.isYoyoOS
                 text: qsTr("Software Update")
                 onClicked: {
                     about.openUpdator()

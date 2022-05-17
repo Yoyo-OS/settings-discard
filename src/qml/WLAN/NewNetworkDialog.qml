@@ -1,7 +1,7 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
- * Author:     Kate Leet <kate@cutefishos.com>
+ * Author:     Kate Leet <kate@yoyoos.com>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.3
 import QtGraphicalEffects 1.0
 
 import FishUI 1.0 as FishUI
-import Cutefish.NetworkManagement 1.0 as NM
+import Yoyo.NetworkManagement 1.0 as NM
 
 FishUI.Window {
     id: control

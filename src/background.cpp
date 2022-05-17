@@ -4,7 +4,7 @@
 static QVariantList getBackgroundPaths()
 {
     QVariantList list;
-    QDirIterator it("/usr/share/backgrounds/cutefishos", QStringList() << "*.jpg" << "*.png", QDir::Files, QDirIterator::Subdirectories);
+    QDirIterator it("/usr/share/backgrounds/yoyoos", QStringList() << "*.jpg" << "*.png", QDir::Files, QDirIterator::Subdirectories);
     while (it.hasNext()) {
         QString bg = it.next();
         list.append(QVariant(bg));
@@ -15,9 +15,9 @@ static QVariantList getBackgroundPaths()
 
 Background::Background(QObject *parent)
     : QObject(parent)
-    , m_interface("com.cutefish.Settings",
+    , m_interface("com.yoyo.Settings",
                   "/Theme",
-                  "com.cutefish.Theme",
+                  "com.yoyo.Theme",
                   QDBusConnection::sessionBus(), this)
 {
     if (m_interface.isValid()) {

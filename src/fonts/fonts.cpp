@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -23,7 +23,7 @@
 
 Fonts::Fonts(QObject *parent)
     : QObject(parent)
-    , m_settings("cutefishos", "theme")
+    , m_settings("yoyoos", "theme")
     , m_antiAliasing(false)
     , m_hintingModel(new QStandardItemModel(this))
 {
@@ -94,9 +94,9 @@ void Fonts::save()
     m_settings.setValue("XftHintStyle", KXftConfig::toStr(m_hinting));
     m_settings.sync();
 
-    QDBusInterface interface("com.cutefish.Settings",
+    QDBusInterface interface("com.yoyo.Settings",
                              "/Theme",
-                             "com.cutefish.Theme",
+                             "com.yoyo.Theme",
                              QDBusConnection::sessionBus());
     if (interface.isValid())
         interface.asyncCall("applyXResources");

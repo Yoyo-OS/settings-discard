@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     Reion Wong <reionwong@gmail.com>
  *
@@ -79,18 +79,18 @@ About::About(QObject *parent)
 {
 }
 
-bool About::isCutefishOS()
+bool About::isYoyoOS()
 {
-    if (!QFile::exists("/etc/cutefishos"))
+    if (!QFile::exists("/etc/yoyoos"))
         return false;
 
-    QSettings settings("/etc/cutefishos", QSettings::IniFormat);
-    return settings.value("CutefishOS", false).toBool();
+    QSettings settings("/etc/yoyoos", QSettings::IniFormat);
+    return settings.value("YoyoOS", false).toBool();
 }
 
 QString About::version()
 {
-    QSettings settings("/etc/cutefish", QSettings::IniFormat);
+    QSettings settings("/etc/yoyo", QSettings::IniFormat);
     return settings.value("Version").toString();
 }
 
@@ -181,7 +181,7 @@ QString About::cpuInfo()
 
 void About::openUpdator()
 {
-    QProcess::startDetached("cutefish-updator", QStringList());
+    QProcess::startDetached("yoyo-updator", QStringList());
 }
 
 qlonglong About::calculateTotalRam() const

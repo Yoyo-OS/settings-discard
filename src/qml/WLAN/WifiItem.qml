@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2021 CutefishOS Team.
+ * Copyright (C) 2021 YoyoOS Team.
  *
  * Author:     revenmartin <revenmartin@gmail.com>
  *
@@ -24,7 +24,7 @@ import QtGraphicalEffects 1.0
 import QtQuick.Window 2.3
 
 import FishUI 1.0 as FishUI
-import Cutefish.NetworkManagement 1.0 as NM
+import Yoyo.NetworkManagement 1.0 as NM
 import "../"
 
 Item {
