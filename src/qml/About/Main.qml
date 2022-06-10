@@ -55,15 +55,15 @@ ItemPage {
                 height: FishUI.Units.smallSpacing
             }
 
-            Image {
-                Layout.preferredWidth: 167
-                Layout.preferredHeight: 26
-                sourceSize: Qt.size(500, 76)
-                source: FishUI.Theme.darkMode ? "qrc:/images/dark/logo.png" : "qrc:/images/light/logo.png"
-                Layout.alignment: Qt.AlignHCenter
-                visible: about.isYoyoOS
-                asynchronous: true
-            }
+//            Image {
+//                Layout.preferredWidth: 167
+//                Layout.preferredHeight: 26
+//                sourceSize: Qt.size(500, 76)
+//                source: FishUI.Theme.darkMode ? "qrc:/images/dark/logo.png" : "qrc:/images/light/logo.png"
+//                Layout.alignment: Qt.AlignHCenter
+//                visible: about.isYoyoOS
+//                asynchronous: true
+//            }
 
             Label {
                 text: qsTr("Built on %1").arg(about.prettyProductName)
