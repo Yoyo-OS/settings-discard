@@ -48,28 +48,18 @@ ItemPage {
                 width: 140
                 height: 72
                 sourceSize: Qt.size(width, height)
-                source: "qrc:/images/logo.svg"
+                source: FishUI.Theme.darkMode ? "qrc:/images/dark/logo.png" : "qrc:/images/light/logo.png"
             }
 
             Item {
                 height: FishUI.Units.smallSpacing
             }
 
-            Label {
-                Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-                text: "<b>Yoyo</b>"
-                visible: !about.isYoyoOS
-                font.pointSize: 22
-                color: "#3385FF"
-                leftPadding: FishUI.Units.largeSpacing * 2
-                rightPadding: FishUI.Units.largeSpacing * 2
-            }
-
             Image {
                 Layout.preferredWidth: 167
                 Layout.preferredHeight: 26
                 sourceSize: Qt.size(500, 76)
-                source: "qrc:/images/logo.png"
+                source: FishUI.Theme.darkMode ? "qrc:/images/dark/logo.png" : "qrc:/images/light/logo.png"
                 Layout.alignment: Qt.AlignHCenter
                 visible: about.isYoyoOS
                 asynchronous: true
