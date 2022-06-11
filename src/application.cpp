@@ -21,7 +21,7 @@
 #include "networkproxy.h"
 #include "notifications.h"
 #include "defaultapplications.h"
-
+#include "accessibility.h"
 #include "cursor/cursorthememodel.h"
 #include "cursor/mouse.h"
 
@@ -83,7 +83,7 @@ Application::Application(int &argc, char **argv)
     qmlRegisterType<NetworkProxy>(uri, 1, 0, "NetworkProxy");
     qmlRegisterType<Notifications>(uri, 1, 0, "Notifications");
     qmlRegisterType<DefaultApplications>(uri, 1, 0, "DefaultApplications");
-
+    qmlRegisterType<Accessibility>(uri, 1, 0, "Accessibility");
     qmlRegisterSingletonType<Password>(uri, 1, 0, "Password", passwordSingleton);
 
 #if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)

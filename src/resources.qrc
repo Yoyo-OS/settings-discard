@@ -51,6 +51,7 @@
         <file>qml/Wallpaper/DesktopPreview.qml</file>
         <file>images/sidebar/dark/about.svg</file>
         <file>images/sidebar/dark/accounts.svg</file>
+        <file>images/sidebar/dark/accessibility.svg</file>
         <file>images/sidebar/dark/appearance.svg</file>
         <file>images/sidebar/dark/battery.svg</file>
         <file>images/sidebar/dark/bluetooth.svg</file>
@@ -124,11 +125,14 @@
         <file>qml/Proxy/Main.qml</file>
         <file>images/sidebar/dark/proxy.svg</file>
         <file>qml/Sound/Main.qml</file>
+        <file>qml/Accessibility/Main.qml</file>
         <file>images/sidebar/dark/sound.svg</file>
         <file>images/light/audio-volume-high-symbolic.svg</file>
         <file>images/light/audio-volume-low-symbolic.svg</file>
         <file>images/light/audio-volume-medium-symbolic.svg</file>
         <file>images/light/audio-volume-muted-symbolic.svg</file>
+        <file>images/light/accessibility.svg</file>
+        <file>images/dark/accessibility.svg</file>
         <file>images/dark/audio-volume-high-symbolic.svg</file>
         <file>images/dark/audio-volume-low-symbolic.svg</file>
         <file>images/dark/audio-volume-medium-symbolic.svg</file>

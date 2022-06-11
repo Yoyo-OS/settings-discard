@@ -98,6 +98,46 @@
         <translation>软件更新</translation>
     </message>
     <message>
+        <location filename="../src/qml/Accessibility/Main.qml" line="12"/>
+        <source>Accessibility</source>
+        <translation>辅助功能</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/Accessibility/Main.qml" line="29"/>
+        <source>Appearance enhancement</source>
+        <translation>外观增强</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/Accessibility/Main.qml" line="36"/>
+        <source>Deform windows while they are moving</source>
+        <translation>窗口惯性晃动</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/Accessibility/Main.qml" line="52"/>
+        <source>Display window thumbnails on the edge of the screen</source>
+        <translation>在屏幕边缘显示窗口的缩略图</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/Accessibility/Main.qml" line="68"/>
+        <source>Visualize touch points</source>
+        <translation>高亮显示在触控屏幕上的触摸点</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/Accessibility/Main.qml" line="85"/>
+        <source>Barrier free function</source>
+        <translation>无障碍</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/Accessibility/Main.qml" line="92"/>
+        <source>Snap Helper</source>
+        <translation>窗口居中辅助线</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/Accessibility/Main.qml" line="108"/>
+        <source>Dim Inactive</source>
+        <translation>非活动窗口变暗</translation>
+    </message>
+    <message>
         <location filename="../src/qml/Appearance/Main.qml" line="30"/>
         <source>Appearance</source>
         <translation>外观</translation>
@@ -999,6 +1039,11 @@
         <location filename="../src/qml/SideBar.qml" line="82"/>
         <source>Bluetooth</source>
         <translation>蓝牙</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/SideBar.qml" line="226"/>
+        <source>Accessibility</source>
+        <translation>辅助功能</translation>
     </message>
     <message>
         <location filename="../src/qml/SideBar.qml" line="159"/>

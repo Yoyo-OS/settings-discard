@@ -214,8 +214,17 @@ Item {
         }
 
         ListElement {
+            title: qsTr("Accessibility")
+            name: "accessibility"
+            page: "qrc:/qml/Accessibility/Main.qml"
+            iconSource: "accessibility.svg"
+            iconColor: "#2EC347"
+            category: qsTr("System")
+        }
+        
+        ListElement {
             title: qsTr("Default Applications")
-            name: "datetime"
+            name: "defaultapps"
             page: "qrc:/qml/DefaultApp/Main.qml"
             iconSource: "defaultapps.svg"
             iconColor: "#418CFF"
