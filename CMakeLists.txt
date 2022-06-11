@@ -32,6 +32,7 @@ set(SRCS
     src/cscreenmanager.cpp
     src/cscreenoutput.cpp
     src/application.cpp
+    src/accessibility.cpp
     src/main.cpp
     src/appearance.cpp
     src/battery.cpp
