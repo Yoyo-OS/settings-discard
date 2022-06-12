@@ -26,7 +26,7 @@ jobs:
         mkdir ~/deb-${{ matrix.os }}
         find -name "*.deb" | xargs -I {} cp {} ~/deb-${{ matrix.os }}
     - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: Ubuntu
-          path: ~/deb-${{ matrix.os }}/*
+      uses: actions/upload-artifact@v3
+      with:
+        name: Ubuntu
+        path: ~/deb-${{ matrix.os }}/*
