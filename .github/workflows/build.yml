@@ -8,22 +8,6 @@ on:
       - main
 
 jobs:
-  debian:
-    name: Debian
-    runs-on: ubuntu-latest
-    container: docker.io/library/debian:sid
-    steps:
-    - name: Checkout Source
-      uses: actions/checkout@v2
-    - name: Update repository
-      run: apt-get update -y
-    - name: Install the basic dev packages
-      run: apt-get install -y equivs curl git devscripts lintian build-essential automake autotools-dev cmake g++
-    - name: Install build dependencies
-      run: mk-build-deps -i -t "apt-get --yes" -r
-    - name: Build Package
-      run: dpkg-buildpackage -b -uc -us -j$(nproc)
-
   ubuntu:
     name: Ubuntu
     runs-on: ubuntu-latest
@@ -37,4 +21,12 @@ jobs:
     - name: Install build dependencies
       run: sudo mk-build-deps -i -t "apt-get --yes" -r
     - name: Build Package
-      run: dpkg-buildpackage -b -uc -us -j$(nproc)
+      run: |
+        dpkg-buildpackage -b -uc -us -j$(nproc)
+        mkdir ~/deb-${{ matrix.os }}
+        find -name "*.deb" | xargs -I {} cp {} ~/deb-${{ matrix.os }}
+    - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Ubuntu
+          path: ~/deb-${{ matrix.os }}/*
