@@ -98,6 +98,46 @@
         <translation>软件更新</translation>
     </message>
     <message>
+        <location filename="../src/digitalwellbeing.cpp" line="23"/>
+        <source>h</source>
+        <translation>小时</translation>
+    </message>
+    <message>
+        <location filename="../src/digitalwellbeing.cpp" line="23"/>
+        <source>m</source>
+        <translation>分钟</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DigitalWellbeing/Main.qml" line="11"/>
+        <source>Digital Wellbeing</source>
+        <translation>数字健康</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DigitalWellbeing/Main.qml" line="11"/>
+        <source>times</source>
+        <translation>次</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DigitalWellbeing/Main.qml" line="92"/>
+        <source>Time</source>
+        <translation>时长</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DigitalWellbeing/Main.qml" line="96"/>
+        <source>Frequency</source>
+        <translation>频率</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DigitalWellbeing/UsageRanking.qml" line="68"/>
+        <source>More</source>
+        <translation>查看更多</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/DigitalWellbeing/Main.qml" line="66"/>
+        <source>Screen time usage</source>
+        <translation>屏幕使用时间</translation>
+    </message>
+    <message>
         <location filename="../src/qml/Accessibility/Main.qml" line="12"/>
         <source>Accessibility</source>
         <translation>辅助功能</translation>
@@ -1041,7 +1081,12 @@
         <translation>蓝牙</translation>
     </message>
     <message>
-        <location filename="../src/qml/SideBar.qml" line="226"/>
+        <location filename="../src/qml/SideBar.qml" line="208"/>
+        <source>Digital Wellbeing</source>
+        <translation>数字健康</translation>
+    </message>
+    <message>
+        <location filename="../src/qml/SideBar.qml" line="217"/>
         <source>Accessibility</source>
         <translation>辅助功能</translation>
     </message>
