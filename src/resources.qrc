@@ -102,8 +102,6 @@
         <file>images/sidebar/dark/wlan.svg</file>
         <file>qml/Bluetooth/Main.qml</file>
         <file>qml/StandardButton.qml</file>
-        <file>qml/Fonts/Main.qml</file>
-        <file>images/sidebar/dark/fonts.svg</file>
         <file>qml/Hotspot/Main.qml</file>
         <file>images/sidebar/dark/hotspot.svg</file>
         <file>qml/Application/Main.qml</file>
@@ -150,5 +148,10 @@
         <file>qml/WLAN/ConnectDialog.qml</file>
         <file>qml/WLAN/NewNetworkDialog.qml</file>
         <file>qml/DefaultApp/AppComboBox.qml</file>
+        <file>qml/DigitalWellbeing/Main.qml</file>
+        <file>images/sidebar/dark/digitalwellbeing.svg</file>
+        <file>qml/DigitalWellbeing/DigitalWellbeingItem.qml</file>
+        <file>qml/DigitalWellbeing/UsageRanking.qml</file>
+        <file>qml/DigitalWellbeing/utils.js</file>
     </qresource>
 </RCC>
