@@ -8,17 +8,23 @@ Accessibility::Accessibility(QObject *parent)
     : QObject(parent)
     , m_kwinSettings(new QSettings(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + "/kwinrc",
                                QSettings::IniFormat))
+    , m_wobblyWindows(false)
+    , m_thumbnailaside(false)
+    , m_touchpoints(false)
+    , m_snaphelper(false)
+    , m_diminactive(false)
 {
+    m_kwinSettings->beginGroup("Plugins");
     m_wobblyWindows = m_kwinSettings->value("wobblywindowsEnabled").toBool();
     m_thumbnailaside = m_kwinSettings->value("thumbnailasideEnabled").toBool();
     m_touchpoints = m_kwinSettings->value("touchpointsEnabled").toBool();
     m_snaphelper = m_kwinSettings->value("snaphelperEnabled").toBool();
     m_diminactive = m_kwinSettings->value("diminactiveEnabled").toBool();
+    m_kwinSettings->endGroup();
 }
 
 bool Accessibility::wobblyWindows() const
 {
-    m_wobblyWindows = m_kwinSettings->value("wobblywindowsEnabled").toBool();
     return m_wobblyWindows;
 }
 
@@ -37,7 +43,6 @@ void Accessibility::setWobblywindows(bool enabled)
 
 bool Accessibility::thumbnailaside() const
 {
-    m_thumbnailaside = m_kwinSettings->value("thumbnailasideEnabled").toBool();
     return m_thumbnailaside;
 }
 
@@ -56,7 +61,6 @@ void Accessibility::setThumbnailaside(bool enabled)
 
 bool Accessibility::touchpoints() const
 {
-    m_touchpoints = m_kwinSettings->value("touchpointsEnabled").toBool();
     return m_touchpoints;
 }
 
@@ -75,7 +79,6 @@ void Accessibility::setTouchpoints(bool enabled)
 
 bool Accessibility::snaphelper() const
 {
-    m_snaphelper = m_kwinSettings->value("snaphelperEnabled").toBool();
     return m_snaphelper;
 }
 
@@ -94,7 +97,6 @@ void Accessibility::setSnaphelper(bool enabled)
 
 bool Accessibility::diminactive() const
 {
-    m_diminactive = m_kwinSettings->value("diminactiveEnabled").toBool();
     return m_diminactive;
 }
 
