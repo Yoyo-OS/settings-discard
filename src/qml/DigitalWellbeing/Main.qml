@@ -86,7 +86,7 @@ ItemPage {
                         Layout.fillWidth: true
                         currentIndex: 0
                         onCurrentIndexChanged: list.listmodel
-                                               = currentIndex ? sortedByTimeModel : sortedByFreqModel
+                                               = currentIndex ? sortedByFreqModel : sortedByTimeModel
 
                         TabButton {
                             text: qsTr("Time")
