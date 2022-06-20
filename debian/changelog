@@ -1,3 +1,9 @@
+yoyo-settings (0.9) unstable; urgency=high
+
+  * Functional update to 0.9
+
+ -- weilinfox <support@yoyoos.com>  Mon, 20 Jun 2022 11:19:00 +0800
+
 yoyo-settings (0.8-2) UNRELEASED; urgency=medium
 
   * Adapt Accessibility
