@@ -41,3 +41,8 @@ Depends: qml-module-qtquick-controls2,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: YoyoOS Settings
+
+Package: yoyo-settings-dev
+Architecture: any
+Depends: yoyo-settings (= ${binary:Version}), ${misc:Depends}, ${shlib:Depends}, ${dist:Depends}
+Description: YoyoOS Settings Dev

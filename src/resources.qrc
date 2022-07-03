@@ -148,10 +148,5 @@
         <file>qml/WLAN/ConnectDialog.qml</file>
         <file>qml/WLAN/NewNetworkDialog.qml</file>
         <file>qml/DefaultApp/AppComboBox.qml</file>
-        <file>qml/DigitalWellbeing/Main.qml</file>
-        <file>images/sidebar/dark/digitalwellbeing.svg</file>
-        <file>qml/DigitalWellbeing/DigitalWellbeingItem.qml</file>
-        <file>qml/DigitalWellbeing/UsageRanking.qml</file>
-        <file>qml/DigitalWellbeing/utils.js</file>
     </qresource>
 </RCC>

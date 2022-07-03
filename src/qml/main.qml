@@ -75,6 +75,19 @@ FishUI.Window {
         }
     }
 
+    function addPage(title,name,page,iconSource,iconColor,category) {
+       sideBar.model.append(
+        {
+            "title": title,
+            "name": name,
+            "page": page,
+            "iconSource": iconSource,
+            "iconColor": iconColor,
+            "category": category
+        } 
+    );
+    }
+    
     function switchPageFromIndex(index) {
         _stackView.pop()
         _stackView.push(Qt.resolvedUrl(sideBar.model.get(index).page))

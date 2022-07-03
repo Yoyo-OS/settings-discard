@@ -205,15 +205,6 @@ Item {
         }
 
         ListElement {
-            title: qsTr("Digital Wellbeing")
-            name: "digitalwellbeing"
-            page: "qrc:/qml/DigitalWellbeing/Main.qml"
-            iconSource: "digitalwellbeing.svg"
-            iconColor: "#34B4A7"
-            category: qsTr("System")
-        }
-
-        ListElement {
             title: qsTr("Accessibility")
             name: "accessibility"
             page: "qrc:/qml/Accessibility/Main.qml"

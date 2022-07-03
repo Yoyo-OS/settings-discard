@@ -33,7 +33,6 @@ set(SRCS
     src/cscreenoutput.cpp
     src/application.cpp
     src/accessibility.cpp
-    src/digitalwellbeing.cpp
     src/main.cpp
     src/appearance.cpp
     src/battery.cpp
@@ -108,6 +107,7 @@ target_link_libraries(${PROJECT_NAME}
 )
 
 file(GLOB TS_FILES translations/*.ts)
+file(GLOB HEADERS "include/*")
 qt5_create_translation(QM_FILES ${TS_FILES})
 add_custom_target(translations DEPENDS ${QM_FILES} SOURCES ${TS_FILES})
 add_dependencies(${PROJECT_NAME} translations)
@@ -121,3 +121,7 @@ install(FILES
 )
 
 install(FILES ${QM_FILES} DESTINATION /usr/share/${PROJECT_NAME}/translations)
+
+# dev files
+set(INCLUDE_INSTALL_DIR include/yoyo-settings)
+install(DIRECTORY ${HEADERS} DESTINATION ${INCLUDE_INSTALL_DIR})

@@ -22,12 +22,13 @@
 #include "notifications.h"
 #include "defaultapplications.h"
 #include "accessibility.h"
-#include "digitalwellbeing.h"
 #include "cursor/cursorthememodel.h"
 #include "cursor/mouse.h"
 
 #include "datetime/time.h"
 #include "datetime/timezonemap.h"
+
+const QString ModuleDirectory = "/usr/lib/yoyo-settings/modules";
 
 static QObject *passwordSingleton(QQmlEngine *engine, QJSEngine *scriptEngine)
 {
@@ -85,7 +86,6 @@ Application::Application(int &argc, char **argv)
     qmlRegisterType<Notifications>(uri, 1, 0, "Notifications");
     qmlRegisterType<DefaultApplications>(uri, 1, 0, "DefaultApplications");
     qmlRegisterType<Accessibility>(uri, 1, 0, "Accessibility");
-    qmlRegisterType<DigitalWellbeing>(uri, 1, 0, "DigitalWellbeing");
     qmlRegisterSingletonType<Password>(uri, 1, 0, "Password", passwordSingleton);
 
 #if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
@@ -113,7 +113,59 @@ Application::Application(int &argc, char **argv)
         switchToPage(module);
     }
 
+    insertPlugin();
+
     QApplication::exec();
+}
+
+void Application::insertPlugin()
+{
+    QDir moduleDir(ModuleDirectory);
+    if (!moduleDir.exists()) {
+        qDebug() << "module directory not exists";
+        return;
+    }
+    auto moduleList = moduleDir.entryInfoList();
+    for (auto i : moduleList) {
+        QString path = i.absoluteFilePath();
+
+        if (!QLibrary::isLibrary(path))
+            continue;
+
+        qDebug() << "loading module: " << i;
+        QElapsedTimer et;
+        et.start();
+        QPluginLoader loader(path);
+
+        QObject *instance = loader.instance();
+        if (!instance) {
+            qDebug() << loader.errorString();
+            continue;
+        }
+
+        instance->setParent(this);
+
+        auto *module = qobject_cast<ModuleInterface *>(instance);
+        if (!module) {
+            return;
+        }
+        qDebug() << "load plugin Name: " << module->name() << module->title();
+        qDebug() << "load this plugin using time: " << et.elapsed() << "ms";
+
+        if(module->enabled())
+        {
+            addPage(module->title(),module->name(),module->qmlPath(),module->iconPath(),module->iconColor().name(),module->category());
+        }
+    }
+}
+
+void Application::addPage(QString title,QString name,QString page,QString iconSource,QString iconColor,QString category)
+{
+    QObject *mainObject = m_engine.rootObjects().first();
+
+    if (mainObject) {
+        QMetaObject::invokeMethod(mainObject, "addPage", Q_ARG(QVariant, title), Q_ARG(QVariant, name), Q_ARG(QVariant, page), Q_ARG(QVariant, iconSource), Q_ARG(QVariant, iconColor), Q_ARG(QVariant, category));
+    }
 }
 
 void Application::switchToPage(const QString &name)
