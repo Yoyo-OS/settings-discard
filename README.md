@@ -1,5 +1,7 @@
 # Settings
 
+[![Build](https://github.com/Yoyo-OS/settings/actions/workflows/build.yml/badge.svg)](https://github.com/Yoyo-OS/settings/actions/workflows/build.yml)
+
 The System Settings application for Yoyo Desktop.
 
 ![screenshot](screenshots/Screenshot_20211025_150819.png)
