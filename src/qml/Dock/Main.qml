@@ -65,38 +65,38 @@ ItemPage {
                 }
             }
 
-            // position
-            RoundedItem {
-                Label {
-                    text: qsTr("Position on screen")
-                    color: FishUI.Theme.disabledTextColor
-                }
+//            // position
+//            RoundedItem {
+//                Label {
+//                    text: qsTr("Position on screen")
+//                    color: FishUI.Theme.disabledTextColor
+//                }
 
-                RowLayout {
-                    spacing: FishUI.Units.largeSpacing * 2
+//                RowLayout {
+//                    spacing: FishUI.Units.largeSpacing * 2
 
-                    IconCheckBox {
-                        source: "qrc:/images/dock_left.svg"
-                        text: qsTr("Left")
-                        checked: appearance.dockDirection === 0
-                        onClicked: appearance.setDockDirection(0)
-                    }
+//                    IconCheckBox {
+//                        source: "qrc:/images/dock_left.svg"
+//                        text: qsTr("Left")
+//                        checked: appearance.dockDirection === 0
+//                        onClicked: appearance.setDockDirection(0)
+//                    }
 
-                    IconCheckBox {
-                        source: "qrc:/images/dock_bottom.svg"
-                        text: qsTr("Bottom")
-                        checked: appearance.dockDirection === 1
-                        onClicked: appearance.setDockDirection(1)
-                    }
+//                    IconCheckBox {
+//                        source: "qrc:/images/dock_bottom.svg"
+//                        text: qsTr("Bottom")
+//                        checked: appearance.dockDirection === 1
+//                        onClicked: appearance.setDockDirection(1)
+//                    }
 
-                    IconCheckBox {
-                        source: "qrc:/images/dock_right.svg"
-                        text: qsTr("Right")
-                        checked: appearance.dockDirection === 2
-                        onClicked: appearance.setDockDirection(2)
-                    }
-                }
-            }
+//                    IconCheckBox {
+//                        source: "qrc:/images/dock_right.svg"
+//                        text: qsTr("Right")
+//                        checked: appearance.dockDirection === 2
+//                        onClicked: appearance.setDockDirection(2)
+//                    }
+//                }
+//            }
 
             // Dock Size
             RoundedItem {
